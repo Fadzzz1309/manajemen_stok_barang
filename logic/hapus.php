@@ -1,0 +1,14 @@
+<?php
+include '../koneksi.php';
+
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+    $query = mysqli_query($koneksi, "DELETE FROM barang WHERE id='$id'");
+
+    if ($query) {
+        header("Location: ../index.php?pesan=sukses_hapus");
+    } else {
+        header("Location: ../index.php?pesan=gagal_hapus");
+    }
+}
+?>

@@ -1,13 +1,12 @@
 <?php
 $host="localhost";
 $user="root";
-$pass="";
-$db_name="db_stoc";
+$pass="root@123";
+$db_name="db_stok";
 
-$connection=mysqli_connect($host,$user,$pass,$db_name);
+$koneksi=mysqli_connect($host,$user,$pass,$db_name);
 
-if(!$connection) {
- die("Koneksi gagal = ".mysqli_connect_error());
+if(!$koneksi) {
+    die("Koneksi gagal = ".mysqli_connect_error());
 }
-
 ?>
